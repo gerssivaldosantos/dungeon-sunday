@@ -1,6 +1,4 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <q-card>
       <q-card-section class="header">
         <img src="src/assets/logo.png" class="logo" alt="logo">
         <img src="src/assets/dragon.gif" class="dragon" alt="logo">
@@ -34,8 +32,6 @@
           </div>
         </q-form>
       </q-card-section>
-    </q-card>
-  </q-page>
 </template>
 
 <script setup lang="ts">
@@ -100,7 +96,6 @@ watch(() => character.class, async () => {
 </script>
 
 <style scoped lang="scss">
-
 .header {
   display: flex;
   align-items: flex-end;
@@ -115,18 +110,5 @@ watch(() => character.class, async () => {
   height: 70%;
   left: 1rem;
   top: 0
-}
-.q-card {
-  width: 80%;
-  max-width: 1024px;
-}
-
-@media (max-width: 640px) {
-  .header > .logo {
-    width: 100%;
-  }
-  .q-card {
-    width: 100%;
-  }
 }
 </style>

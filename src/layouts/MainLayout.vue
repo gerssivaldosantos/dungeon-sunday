@@ -34,7 +34,11 @@
     </q-drawer>
 
     <q-page-container>
+      <q-page class="row items-center justify-evenly">
+        <q-card>
       <router-view />
+        </q-card>
+      </q-page>
     </q-page-container>
 
   </q-layout>
@@ -61,6 +65,12 @@ const menuList = [
     route: '/spells-helper'
   },
   {
+    icon: 'person',
+    label: 'Class Wiki',
+    separator: false,
+    route: '/class-wiki'
+  },
+  {
     icon: 'help',
     label: 'Help',
     separator: false,
@@ -71,3 +81,24 @@ function toggleRightDrawer () {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
 </script>
+
+<style scoped lang="scss">
+
+.q-card {
+  width: 80%;
+  max-width: 1024px;
+}
+
+@media (max-width: 940px) {
+  .q-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .header > .logo {
+    width: 100%;
+  }
+
+}
+</style>
